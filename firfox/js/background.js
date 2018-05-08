@@ -1,7 +1,7 @@
 chrome.webRequest.onBeforeRequest.addListener(
     function(request) {
-        var url = request.url.replace('googleapis.com', 'lug.ustc.edu.cn');
-        url = url.replace('themes.googleusercontent.com', 'google-themes.lug.ustc.edu.cn');
+        var url = request.url.replace('googleapis.com', 'proxy.ustclug.org');
+        url = url.replace('themes.googleusercontent.com', 'google-themes.proxy.ustclug.org');
         return {redirectUrl: url};
     },
     {
